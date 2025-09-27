@@ -8,22 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2774565146065777');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2774565146065777&ev=PageView&noscript=1"
-    /></noscript>
     <style>
         /* --- ESTILOS GERAIS --- */
         body {
@@ -133,6 +117,7 @@
             border-radius: 4px;
             text-align: center;
             transition: background-color 0.3s ease;
+            animation: pulse-animation 1.5s infinite;
         }
         
         .hero-column .cta-button:hover {
@@ -483,8 +468,7 @@
             margin: 0;
         }
 
-
-        /* --- NOVA SEÇÃO FAQ (PERGUNTAS FREQUENTES) --- */
+        /* --- SEÇÃO FAQ --- */
         .faq-section {
             padding: 80px 0;
             background-color: #FFFFFF;
@@ -571,6 +555,69 @@
         }
         .faq-item .faq-content strong {
             color: #000;
+        }
+        
+        /* --- SEÇÃO FINAL CTA --- */
+        .final-cta-section {
+            padding: 60px 0;
+            background-image: linear-gradient(180deg, #4F3FFD 0%, #000000 100%);
+            color: #FFFFFF;
+            text-align: center;
+        }
+        .final-cta-section .urgency-text {
+            color: #FBFF00;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .final-cta-section .product-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+        }
+        .final-cta-section .price-block {
+            margin-bottom: 25px;
+        }
+        .final-cta-section .old-price {
+            font-size: 1.2rem;
+            color: #ccc;
+            text-decoration: line-through;
+            margin-right: 15px;
+        }
+        .final-cta-section .new-price {
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+        .final-cta-section .new-price strong {
+            font-weight: 800;
+            color: #FBFF00;
+        }
+        .final-cta-section .benefits-summary p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .final-cta-section .cta-button-final {
+            display: inline-block;
+            background-color: #FBFF00;
+            color: #000000;
+            font-size: 22px;
+            font-weight: 800;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(251, 255, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse-animation 1.5s infinite;
+        }
+        .final-cta-section .cta-button-final:hover {
+            transform: scale(1.05);
+        }
+        @keyframes pulse-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
         }
 
         /* --- RODAPÉ --- */
@@ -883,6 +930,23 @@
                     </details>
                 </div>
             </div>
+        </div>
+    </section>
+    
+    <section class="final-cta-section">
+        <div class="container">
+            <h3 class="urgency-text">ÚLTIMA CHANCE COM DESCONTO E FRETE GRÁTIS</h3>
+            <h2 class="product-title">Óculos 2V Pro Original</h2>
+            <div class="price-block">
+                <span class="old-price">De R$189,90</span>
+                <span class="new-price">por apenas <strong>R$129,90</strong></span>
+            </div>
+            <div class="benefits-summary">
+                <p>✓ Frete Grátis para todo o Brasil</p>
+                <p>✓ Pague Somente na Entrega</p>
+                <p>✓ 7 Dias de Garantia de Satisfação</p>
+            </div>
+            <a href="#compra" class="cta-button-final">QUERO MEUS ÓCULOS COM DESCONTO AGORA!</a>
         </div>
     </section>
 
