@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óculos 2V Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2774565146065777');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2774565146065777&ev=PageView&noscript=1"
+    /></noscript>
+    <style>
+        /* --- ESTILOS GERAIS --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- BARRA SUPERIOR --- */
+        .top-bar {
+            background-color: #FF0000;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .top-bar h2 {
+            margin: 0;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.1rem, 4vw, 1.6rem);
+            font-weight: 600;
+        }
+
+        /* --- SEÇÃO HERO --- */
+        .hero-section {
+            background-image: linear-gradient(180deg, #4F3FFD 0%, #000000 100%);
+            padding: 60px 0;
+            position: relative;
+            color: #FFFFFF;
+        }
+        
+        .hero-section .shape-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        
+        .hero-section .shape-divider svg {
+            position: relative;
+            display: block;
+            width: calc(300% + 1.3px);
+            height: 34px;
+        }
+
+        .hero-section .shape-divider .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero-column {
+            width: 50%;
+        }
+
+        .hero-column.text-column {
+            text-align: left;
+        }
+        
+        .hero-column .logo {
+            max-width: 77%;
+            margin-bottom: 20px;
+        }
+        
+        .hero-column h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+        }
+
+        .hero-column p {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.4;
+            max-width: 91%;
+            margin-bottom: 25px;
+        }
+
+        .hero-column .cta-button {
+            display: inline-block;
+            background-color: #FBFF00;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 25px;
+            border-radius: 4px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .hero-column .cta-button:hover {
+            background-color: #d8dd00;
+        }
+
+        .hero-column.image-column {
+            text-align: center;
+        }
+
+        .hero-column .hero-image {
+            max-width: 78%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px -13px rgba(0,0,0,0.5);
+        }
+        
+        /* --- SEÇÃO DEPOIMENTOS (CARROSSEL) --- */
+        .testimonials-section {
+            padding: 60px 0; 
+            background-color: #FFFFFF;
+        }
+        
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            color: #000000;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        
+        .image-carousel-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .image-carousel-track {
+            display: flex;
+            width: calc(200%);
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .image-carousel-track img {
+             flex-shrink: 0;
+             width: 16.66%;
+        }
+        
+        /* --- SEÇÃO DE DESTAQUE DE PAGAMENTO --- */
+        .highlight-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        .payment-highlight-box {
+            background-color: #FFFFFF;
+            border: 2px dashed #cccccc;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .payment-highlight-box .icon {
+            font-size: 50px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .payment-highlight-box .pre-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #555;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .payment-highlight-box .main-title {
+            font-size: 34px;
+            font-weight: 800;
+            color: #000000;
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .payment-highlight-box .main-title span {
+            background-color: #fff604;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        /* --- SEÇÃO DE VÍDEO --- */
+        .video-section {
+            padding: 50px 0;
+            background-color: #FFFFFF;
+        }
+        
+        .video-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .video-column {
+            flex: 1;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 para desktop */
+            height: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-separator-text {
+            display: none; /* Oculto por padrão no desktop */
+        }
+
+        /* --- SEÇÃO DE BENEFÍCIOS --- */
+        .key-benefits-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        .key-benefits-section .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        .benefits-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            gap: 20px;
+        }
+        .benefit-item {
+            flex: 1;
+            padding: 20px;
+        }
+        .benefit-item .icon {
+            font-size: 45px;
+            color: #4F3FFD;
+            margin-bottom: 15px;
+        }
+        .benefit-item h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+        .benefit-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .payment-methods {
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        
+        /* --- SEÇÃO DE OFERTAS --- */
+        .offer-selection-section {
+            padding: 50px 0;
+            background-image: linear-gradient(180deg, #4F3FFD 0%, #000000 100%);
+            color: #FFFFFF;
+        }
+        .offer-selection-section h2 {
+            font-size: 34px;
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .offer-selection-section p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.4;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+        .offer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .offer-item a {
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.34);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .offer-item a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        .offer-item img {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+        }
+        
+        /* --- SEÇÃO PASSO A PASSO --- */
+        .how-to-order-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+        .how-to-order-section .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .how-to-order-section .section-subtitle {
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e9ecef;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4F3FFD;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            font-size: 18px;
+        }
+        .timeline-content {
+            text-align: left;
+        }
+        .timeline-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+        }
+        .timeline-content p {
+            font-size: 16px;
+            color: #555;
+            margin: 0;
+        }
+        .attention-box {
+            max-width: 600px;
+            margin: 40px auto 0 auto;
+            padding: 20px;
+            background-color: #fffbe6;
+            border-left: 5px solid #FFC107;
+            text-align: left;
+            border-radius: 8px;
+        }
+        .attention-box p {
+            margin: 0;
+            font-weight: 500;
+            color: #555;
+        }
+        .attention-box strong {
+            color: #D32F2F;
+        }
+
+        /* --- SEÇÃO GARANTIA --- */
+        .guarantee-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .guarantee-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .guarantee-image-col {
+            flex: 1;
+            text-align: center;
+        }
+        .guarantee-image-col img {
+            max-width: 150px;
+        }
+        .guarantee-text-col {
+            flex: 2;
+            text-align: left;
+        }
+        .guarantee-text-col h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .guarantee-text-col p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+
+
+        /* --- NOVA SEÇÃO FAQ (PERGUNTAS FREQUENTES) --- */
+        .faq-section {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+        .faq-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .faq-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #4F3FFD;
+            border-radius: 2px;
+        }
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .faq-item details {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            background-color: #fcfcfc;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .faq-item details[open] {
+            background-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .faq-item summary {
+            padding: 20px 25px;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .faq-item summary:hover {
+            color: #4F3FFD;
+        }
+        .faq-item summary .icon-prefix {
+            margin-right: 15px;
+            color: #4F3FFD;
+            font-size: 22px;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::after {
+            content: '\2B';
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 1.2em;
+            color: #666;
+            transition: transform 0.2s, color 0.3s;
+        }
+        .faq-item details[open] summary::after {
+            content: '\2212';
+            transform: rotate(0deg);
+            color: #4F3FFD;
+        }
+        .faq-item .faq-content {
+            padding: 0 25px 20px 25px;
+            color: #555;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .faq-item .faq-content strong {
+            color: #000;
+        }
+
+        /* --- RODAPÉ --- */
+        .site-footer {
+            padding: 50px 0;
+            color: #fff;
+            background-image: radial-gradient(at center center, #0013FF 0%, #000455 100%);
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .footer-column {
+            width: 25%;
+        }
+        .footer-column img {
+            max-width: 100%;
+        }
+        .footer-column h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .footer-column p {
+            margin: 0 0 10px 0;
+        }
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            color: #A0A0A0;
+            font-size: 14px;
+        }
+
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 767px) {
+            .hero-content { flex-direction: column-reverse; }
+            .hero-column { width: 100%; text-align: center; }
+            .hero-column.text-column { text-align: center; }
+            .hero-column .logo { display: none; }
+            .hero-column p { max-width: 100%; }
+            .hero-column.image-column { margin-top: 30px; }
+            .image-carousel-track { width: calc(300%); }
+            .image-carousel-track img { width: 33.33%; }
+            .payment-highlight-box { padding: 30px 20px; }
+            .payment-highlight-box .pre-title { font-size: 20px; }
+            .payment-highlight-box .main-title { font-size: 28px; }
+            .benefits-grid { flex-direction: column; }
+            .offer-grid { flex-direction: column; align-items: center; }
+            
+            .timeline::before { left: 20px; }
+            .timeline-item { padding-left: 70px; }
+            .timeline-icon { left: 0; }
+
+            .guarantee-content { flex-direction: column; }
+            .guarantee-text-col { text-align: center; }
+            .guarantee-image-col { margin-bottom: 20px; }
+
+            .faq-section h2::after { width: 60px; }
+            .faq-item summary { font-size: 16px; padding: 15px 20px; }
+            .faq-item summary .icon-prefix { margin-right: 10px; font-size: 20px; }
+            .faq-item .faq-content { font-size: 15px; padding: 0 20px 15px 20px; }
+
+
+            .footer-grid { flex-direction: column; text-align: center; }
+            .footer-column { width: 100%; margin-bottom: 30px; }
+            
+            .video-section {
+                padding: 0;
+            }
+            .video-grid {
+                flex-direction: column;
+                gap: 0;
+            }
+            .video-wrapper {
+                max-width: 100%;
+                margin: 0;
+                border-radius: 0;
+                padding-bottom: 177.77%;
+            }
+
+            .video-separator-text {
+                display: block;
+                text-align: center;
+                margin: 30px 15px;
+                padding: 0;
+                background-color: transparent;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #4F3FFD;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <h2>📦 PAGUE NA ENTREGA - 🚚 FRETE GRÁTIS</h2>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-column text-column">
+                    <img src="https://allmixword.online/wp-content/uploads/2025/08/Design_sem_nome__2_-removebg-preview.png" alt="Logo 2V Pro" class="logo">
+                    <h1>Óculos 2v Pro Original!<br>Se adapta ao seu grau de visão!</h1>
+                    <p>Óculos 2V Pro com 50% de desconto e com FRETE GRÁTIS, agende seu pedido no botão abaixo:</p>
+                    <a href="#compra" class="cta-button">AGENDAR MEU PEDIDO</a>
+                </div>
+                <div class="hero-column image-column">
+                    <img src="https://allmixword.online/wp-content/uploads/2025/09/DEP-NOVO-2.jpg" alt="Óculos 2V Pro" class="hero-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 10" preserveAspectRatio="none">
+                <path class="shape-fill" d="M360 0L350 9.9 340 0 0 0 0 10 700 10 700 0"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>QUEM COMPROU AMOU! VEJAM O QUE ESTÃO DIZENDO! 💙</h2>
+        </div>
+        <div class="image-carousel-container">
+            <div class="image-carousel-track">
+                <img src="https://allmixword.online/wp-content/uploads/2025/08/ADS5-8.png" alt="Depoimento 1">
+                <img src="https://allmixword.online/wp-content/uploads/2025/08/ADS5-6.png" alt="Depoimento 2">
+                <img src="https://allmixword.online/wp-content/uploads/2025/08/ADS5-7.png" alt="Depoimento 3">
+                <img src="https://allmixword.online/wp-content/uploads/2025/08/ADS5-8.png" alt="Depoimento 1">
+                <img src="https://allmixword.online/wp-content/uploads/2025/08/ADS5-6.png" alt="Depoimento 2">
+                <img src="https://allmixword.online/wp-content/uploads/2025/08/ADS5-7.png" alt="Depoimento 3">
+            </div>
+        </div>
+    </section>
+
+    <section class="highlight-section">
+        <div class="container">
+            <div class="payment-highlight-box">
+                <div class="icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <p class="pre-title">SEM PRECISAR PAGAR NADA AGORA!</p>
+                <h2 class="main-title"><span>VOCÊ SÓ PAGA QUANDO O PRODUTO CHEGAR NA SUA CASA</span></h2>
+            </div>
+        </div>
+    </section>
+    
+    <section class="video-section">
+        <div class="container">
+             <div class="video-grid">
+                <div class="video-column">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/KC6LOKN8baQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <h2 class="video-separator-text">👇 Veja o que essa cliente disse 👇</h2>
+                <div class="video-column">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/iV_O3GOB2Po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <section class="key-benefits-section">
+        <div class="container">
+            <h2 class="section-title">Receba em Casa com Comodidade</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Pague na Entrega</h3>
+                    <p>Sua segurança em primeiro lugar. Pague somente quando receber o produto em mãos.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon"><i class="fas fa-truck"></i></div>
+                    <h3>Frete Grátis Hoje</h3>
+                    <p>Receba seu pedido no conforto da sua casa sem nenhum custo adicional pela entrega.</p>
+                </div>
+                <div class="benefit-item">
+                     <div class="icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Pagamento Facilitado</h3>
+                    <p>Aceitamos as principais formas de pagamento:</p>
+                    <div class="payment-methods">
+                        <i class="fa-brands fa-pix" title="Pix"></i>
+                        <i class="fas fa-money-bill-wave" title="Dinheiro"></i>
+                        <i class="far fa-credit-card" title="Cartão"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-selection-section" id="compra">
+        <div class="container">
+            <h2>ESCOLHA A MELHOR OPÇÃO!</h2>
+            <p>Oferta por tempo limitado, 60% de desconto a partir de 2 unidades!</p>
+            <div class="offer-grid">
+                <div class="offer-item">
+                    <a href="https://entrega.logzz.com.br/pay/memkoyq7k/1-unidade-oculos-inteligente">
+                        <img src="https://i.ibb.co/5g0KTZhy/1.png" alt="Comprar 1 unidade">
+                    </a>
+                </div>
+                <div class="offer-item">
+                    <a href="https://entrega.logzz.com.br/pay/memkoyq7k/jilfu-2-unidades-oculos-inteligentess">
+                        <img src="https://i.ibb.co/g2MnYcG/2-uni.png" alt="Comprar 2 unidades">
+                    </a>
+                </div>
+                <div class="offer-item">
+                    <a href="https://entrega.logzz.com.br/pay/memkoyq7k/3-unidades-oculos-2v-pro">
+                        <img src="https://i.ibb.co/Wpn4KSPs/3-uni.png" alt="Comprar 3 unidades">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-to-order-section">
+        <div class="container">
+             <h2 class="section-title">SIGA O PASSO A PASSO</h2>
+             <p class="section-subtitle">Após escolher seu kit e clicar em "AGENDAR MEU PEDIDO" você será redirecionado para preencher suas informações!</p>
+
+             <div class="timeline">
+                 <div class="timeline-item">
+                     <div class="timeline-icon"><i class="fas fa-clipboard-list"></i></div>
+                     <div class="timeline-content">
+                         <h3>1. Preencha seus Dados</h3>
+                         <p>Informe seu nome, endereço completo e telefone para a entrega.</p>
+                     </div>
+                 </div>
+                 <div class="timeline-item">
+                     <div class="timeline-icon"><i class="fas fa-calendar-alt"></i></div>
+                     <div class="timeline-content">
+                         <h3>2. Agende a Entrega</h3>
+                         <p>Escolha o melhor dia para receber seu pedido em horário comercial.</p>
+                     </div>
+                 </div>
+                 <div class="timeline-item">
+                     <div class="timeline-icon"><i class="fas fa-mouse-pointer"></i></div>
+                     <div class="timeline-content">
+                         <h3>3. Finalize e Aguarde</h3>
+                         <p>Basta finalizar o pedido e aguardar o contato do nosso entregador para confirmar a entrega.</p>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="attention-box">
+                <p><strong>Atenção:</strong> Certifique-se de que haverá alguém no local para receber e efetuar o pagamento no dia agendado.</p>
+             </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-image-col">
+                    <img src="https://allmixword.online/wp-content/uploads/2025/08/VIDEO1.png" alt="Selo de Satisfação Garantida">
+                </div>
+                <div class="guarantee-text-col">
+                    <h2>Satisfação garantida ou seu dinheiro de volta!</h2>
+                    <p>Se por algum motivo achar que o produto não é para você, basta cancelar a compra e devolveremos todo o valor pago por você, <strong>sem perguntas e sem burocracia!</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-box-open icon-prefix"></i> Quanto custa o frete?</summary>
+                        <div class="faq-content">
+                            <p><strong>Frete 100% GRÁTIS para todo o Brasil!</strong><br>Você não paga nada a mais pela entrega. É só escolher o melhor dia pra receber e pronto.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-truck-loading icon-prefix"></i> Como vou receber o produto?</summary>
+                        <div class="faq-content">
+                            <p>Um entregador entra em contato <strong>antes de sair pra rota</strong>, e a entrega é feita em <strong>horário comercial</strong> no dia que você escolheu.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-clock icon-prefix"></i> Em quanto tempo recebo meu pedido?</summary>
+                        <div class="faq-content">
+                            <p>A entrega é feita em <strong>até 24 horas úteis</strong>, mas você escolhe a data no momento da compra. A gente se adapta à sua agenda.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary><i class="fas fa-user-check icon-prefix"></i> Quais dados preciso informar?</summary>
+                        <div class="faq-content">
+                            <p>Apenas o essencial: <strong>nome completo, endereço de entrega e telefone com WhatsApp</strong> para confirmar a entrega.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                     <img src="https://allmixword.online/wp-content/uploads/2025/08/Design_sem_nome__2_-removebg-preview.png" alt="Logo 2V Pro">
+                </div>
+                <div class="footer-column">
+                     <h3><a href="#">Termos e Condições</a></h3>
+                     <h3><a href="#">Políticas de Privacidade</a></h3>
+                </div>
+                <div class="footer-column">
+                    <h3>Formas de Pagamento</h3>
+                    <img src="https://allmixword.online/wp-content/uploads/2024/12/051.png" alt="Formas de Pagamento">
+                </div>
+                <div class="footer-column">
+                    <h3>Site Seguro</h3>
+                    <p>AMBIENTE SEGURO</p>
+                    <p>SSL CERTIFICADO</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>2025 / 2026- ÓCULOS 2V PRO® Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
